@@ -4,9 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Home from "../components/home"
+import About from "../components/about"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
+import Nav from "../components/nav";
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+  {/* <Layout>
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -15,7 +20,16 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+  </Layout> */}
+  return(
+    <div>
+      <Nav />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
+  )
+}
 
 export default IndexPage

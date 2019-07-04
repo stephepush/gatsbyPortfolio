@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+export const onClientEntry = () => {
+    //IntersectionObserver polyfill for gatsby-background-image (safari, IE)
+    if (typeof window.IntersectionObeserver === `undefined`) {
+        import(`intersection-observer`)
+        console.log(`# IntersectionObserver is polyfilled!`)
+    }
+}

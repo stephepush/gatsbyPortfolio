@@ -1,4 +1,4 @@
-html {
+/* html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -614,9 +614,336 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
+} */
+
+/*my css begins here*/
+
+body {
+  
+  width: calc(100vw - (100vw - 100%));
+  
+  margin: 0;
 }
+
+.portfolio-sections {
+  height: 100vh;
+  /*width: 100vw;*/
+  margin: 0;
+  overflow: hidden;
+} 
+
+#home{
+  height: 100vh;
+  background-image: url('../images/homebg.jpg');
+}
+
+nav{
+  position: fixed;
+  right:0;
+  left: 0;
+  background-color: rgb(6, 243, 184, .2);
+  top: 0;
+  height: 3rem;
+  z-index: 999;
+}
+
+
+#about{
+  background-color: dodgerblue;
+  
+}
+
+#projects{
+  background-color: lavender;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+.container__section{
+  display: grid;
+  grid-template-rows: 9rem auto;
+  /*grid-template-columns: 2% 1fr 1fr 1fr 2%;*/
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 5rem 4rem;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.flex__section{
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card__div--desktop{
+  width: 400px;
+  
+  height: 500px;
+  border: 3px solid black;
+  display: grid;
+  
+  grid-template-rows: 2% auto 10% 1fr 1fr;
+  font-family: 'Fira Sans', sans-serif;
+  margin-top: 2%;
+  
+}
+
+.card__image__container {
+  box-sizing: content-box;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.card__image{
+  object-fit:cover;
+  width: 100% ;
+  height: 100%;
+}
+
+
+.card__name__div {
+  margin: 0 auto;
+  grid-row-start: 3;
+}
+
+.card__blurb__div {
+  width: 90%;
+  margin: 0 auto;
+  grid-row-start: 4;
+}
+
+.card__button__div {
+  grid-row-start: 5;
+  margin: 0 auto;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.view__project__button, .view__code__button{
+ width: 48%; 
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+
+}
+
+/*Projects Media queries below*/
+
+.container__section{
+  display: grid;
+  grid-template-rows: 9rem auto;
+  /*grid-template-columns: 2% 1fr 1fr 1fr 2%;*/
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 5rem 4rem;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.flex__section{
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#contact {
+  background-color: teal;
+}
+
+.portfolio-sections{
+  display:grid;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+.card-container{
+  width: 400px;
+  
+  height: 500px;
+  border: 3px solid black;
+  display: grid;
+  
+  grid-template-rows: 2% auto 10% 1fr 1fr;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.card-img-container {
+  box-sizing: content-box;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.card-img-container>img{
+  object-fit:cover;
+  width: 100% ;
+  height: 100%;
+}
+
+
+div.card-name {
+  margin: 0 auto;
+  grid-row-start: 3;
+}
+
+div.card-blurb {
+  width: 80%;
+  margin: 0 auto;
+  grid-row-start: 4;
+}
+
+div.card-buttons {
+  grid-row-start: 5;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.card-view-project, .card-view-code{
+ width: 48%; 
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+
+}
+
+
+
+#home{
+  grid-template-rows: 5rem 25% 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#home>h1 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  
+}
+
+#home>h2 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#about {
+  grid-template-rows: 5rem repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#about>h2 {
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 5;
+}
+
+#about>main{
+  grid-row-start: 2;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  background-color: rgb(129, 68, 129, .5);
+  border-radius: 15%;
+  z-index: 1
+}
+
+
+/*My css ends here*/
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
+}
+
+
+/*media query for card component*/
+@media screen and (max-width: 768px) {
+  .card-container{
+ 
+  
+  width: 87%;
+  border: 3px solid black;
+  display: grid;
+  
+  grid-template-rows: 2% 50% 10% 1fr 1fr;
+  font-family: 'Fira Sans', sans-serif;
+}
+  
+  .card-img-container {
+  box-sizing: content-box;
+  max-width: 100%;
+  height: auto;
+  object-fit: fit;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+  
+  .card-container>p {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .card-container>h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+
+/*Projects section media queries @ max-width: 768px*/
+
+.card__div--mobile{
+  width: 87%;
+  border: 3px solid green;
+  display: grid;
+  
+  grid-template-rows: 2% 50% 10% 1fr 1fr;
+  font-family: 'Fira Sans', sans-serif;
+}
+  
+  .card__image__container {
+  box-sizing: content-box;
+  max-width: 100%;
+  height: auto;
+  object-fit: fit;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+  
+  .card__description__paragraph--mobile {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .project__name__h2--mobile {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+}
+
+/*Projects media queries @ max-width: 399px*/
+
+@media screen and (max-width: 399px){
+  .card__description__paragraph--small {
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+ .project__name__h2--small{
+  font-size: 1.25rem;
+  font-weight: 800;
+}
 }
