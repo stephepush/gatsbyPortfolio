@@ -1,10 +1,21 @@
 import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby"
+
 
 const Home = () => {
+    const data = useStaticQuery(graphql`
+        query{
+            site {
+                siteMetadata {
+                    title, description, author
+                }
+            }
+        }
+    `)
     return (
         <section class="portfolio-sections" id="home">
-            <h1>Hi I'm Stephen</h1>
-            <h2>I'm a Developer Based in NYC. Welcome to my Portfolio</h2>
+            <h1>{data.site.siteMetadata.title}</h1>
+            <h2>{data.site.siteMetadata.description}</h2>
         </section>
     )
 }

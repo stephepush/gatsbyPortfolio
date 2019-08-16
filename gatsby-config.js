@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Stephen's Web Developer Portfolio`,
-    description: `Welcome to my portfolio of webdev projects`,
+    title: `Hi, I'm Stephen`,
+    description: `I'm a developer based in NYC. Welcome to my portfolio of projects`,
     author: `Stephen Peters`,
   },
   plugins: [
@@ -11,6 +11,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options:{
+        name: `projectimages`,
+        path:`${__dirname}/src/projectImages`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,7 +34,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `react-anchor-link-smooth-scroll`,
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
