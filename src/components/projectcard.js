@@ -1,13 +1,16 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from "gatsby-image";
 
-const ProjectCard = () => {
+
+const ProjectCard = (props) => {
     return (
+      
       <div className="card__div--desktop card__div--mobile ">
         <div className="card__image__container">
-          <img className="card__image"
-    src="https://res.cloudinary.com/dmkct6wfu/image/upload/v1561521301/coliseum-4290893_1920_eqfagn.jpg"
-            alt="image"
-          />
+          {/* <figure className="card__image"> */}
+          <Img fluid={data.drumMachine.childImageSharp.fluid} />
+          {/* </figure> */}
         </div>
         <div className="card__name__div">
           <h2 className="project__name__h2 project__name__h2--mobile project__name__h2--small">Random Quote Generator</h2>
@@ -32,3 +35,24 @@ const ProjectCard = () => {
   };
 
 export default ProjectCard;
+
+const ProjectImages = () => {
+  const data = useStaticQuery(graphql`
+    fragment projectImage on File {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    
+    query {
+      drumMachine: file(relativePath: {eq: "drumMachine.png"}){
+        ...projectImage
+      }
+    }
+  `)
+  return(
+    <Img fluid={data.drumMachine.childImageSharp.fluid} />
+  )
+}
