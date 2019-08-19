@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+// import { graphql} from 'gatsby';
 import Img from "gatsby-image";
 
 
@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
       <div className="card__div--desktop card__div--mobile ">
         <div className="card__image__container">
           {/* <figure className="card__image"> */}
-          <Img fluid={data.drumMachine.childImageSharp.fluid} />
+          <Img fluid={props.image.childImageSharp.fluid} />
           {/* </figure> */}
         </div>
         <div className="card__name__div">
@@ -35,24 +35,3 @@ const ProjectCard = (props) => {
   };
 
 export default ProjectCard;
-
-const ProjectImages = () => {
-  const data = useStaticQuery(graphql`
-    fragment projectImage on File {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    
-    query {
-      drumMachine: file(relativePath: {eq: "drumMachine.png"}){
-        ...projectImage
-      }
-    }
-  `)
-  return(
-    <Img fluid={data.drumMachine.childImageSharp.fluid} />
-  )
-}
