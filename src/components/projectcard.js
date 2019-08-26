@@ -1,37 +1,89 @@
+
+
+
 import React from 'react';
-// import { graphql} from 'gatsby';
 import Img from "gatsby-image";
+import styled from 'styled-components';
 
 
-const ProjectCard = (props) => {
+const Edge = styled.div`
+    width: 400px;
+    height: 500px;
+    border: 3px solid gray;
+    display: grid;
+    grid-template-rows: 6fr 1fr 3fr 2fr 3%;
+    font-family: helvetica;
+    margin-top: 2%;
+    margin: .75rem 0.25rem;
+`;
+
+const ImageContainer = styled.div`
+    max-width: 100%;
+    background: red;
+    grid-row-start: 1;
+    grid-row-end: 2;
+`;
+
+const Heading = styled.h2`
+    margin: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    grid-row-start: 2;
+    grid-row-end: 3;
+`;
+
+const ParagraphDiv = styled.div`
+
+    grid-row-start: 3;
+    grid-row-end: 4;
+`;
+
+const Description = styled.p`
+    margin: 0;
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: .95rem;
+`;
+
+const ButtonDiv = styled.div`
+    display: flex;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-content: center;
+`;
+
+const Button = styled.button`
+    border: 1px solid black;
+    width: 7rem;
+    padding: .5rem 0;
+    margin: .5rem 1rem;
+`;
+
+function ProjectCard(props) {
     return (
-      
-      <div className="card__div--desktop card__div--mobile ">
-        <div className="card__image__container">
-          {/* <figure className="card__image"> */}
-          <Img fluid={props.image.childImageSharp.fluid} />
-          {/* </figure> */}
+        <div>
+            <Edge>
+            <ImageContainer  /* src="https://res.cloudinary.com/dmkct6wfu/image/upload/v1561521301/coliseum-4290893_1920_eqfagn.jpg" */>
+             <Img fluid={props.image.childImageSharp.fluid} />
+            </ImageContainer>
+            <Heading>This is a heading</Heading>
+            <ParagraphDiv>
+                <Description>
+                    This is just some placeholding
+                    text for now. This is where a short
+                    description of the cards subject goes.
+                    Just putting this all here to see how
+                    the text looks.
+                </Description>
+            </ParagraphDiv>
+            <ButtonDiv>
+                <Button>View Project</Button>
+                <Button>View on Github</Button>
+            </ButtonDiv>
+            </Edge>
         </div>
-        <div className="card__name__div">
-          <h2 className="project__name__h2 project__name__h2--mobile project__name__h2--small">Random Quote Generator</h2>
-        </div>
-        <div className="card__blurb__div">
-          <p className="card__description__paragraph card__description__paragraph--mobile card__description__paragraph--small">
-              Where you put a short description of the project. See, you 
-              have enough space to briefly talk about what 
-              technologies you used to develop said project
-          </p>
-        </div>
-        <div className="card__button__div">
-          <button className="view__project__button">
-            View Project
-          </button>
-          <button className="view__code__button">
-            View Code
-          </button>
-        </div>
-      </div>
     );
-  };
+};
 
 export default ProjectCard;
