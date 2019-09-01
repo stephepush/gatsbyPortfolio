@@ -1,6 +1,33 @@
 import React from "react";
 import ProjectCard from "./projectcard";
+import styled from "styled-components"
 import { StaticQuery, graphql } from 'gatsby';
+
+const ContainerSection = styled.section`
+  display: grid;
+  grid-template-rows: 9rem auto;
+
+  @media screen 
+  and (min-width: 1599px) {
+    width: 66%;
+    margin: 0 auto;
+  }
+`;
+
+const ProjectHeader = styled.header`
+  display: grid;
+  grid-template-rows: 5rem 4rem;
+  grid-row-start: 1;
+  grid-row-end: 2;
+`;
+
+const ProjectFlexedMain = styled.main`
+  grid-row-start: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+`;
 
 
 const Projects = () => (
@@ -15,7 +42,7 @@ const Projects = () => (
       }
       markdownEditor: file(relativePath: {eq: "markdownEditor.png"}){
         childImageSharp {
-          fluid(maxWidth: 1000){
+          fluid(maxWidth: 1000, fit: COVER){
             ...GatsbyImageSharpFluid
           }
         }
@@ -43,24 +70,20 @@ const Projects = () => (
       }
     }
   `} render ={(data) => (
-    <section class="container__section">
-      <header class="header">
+    <ContainerSection>
+      <ProjectHeader>
         <div class="header__gap"></div>
         <h1 class="section__header__h1">Cards</h1>
-      </header>
-      <main class="flex__section">
+      </ProjectHeader>
+      <ProjectFlexedMain>
         <ProjectCard image={data.drumMachine} />
         <ProjectCard image={data.markdownEditor}/>
         <ProjectCard image={data.pomodoroTimer}/>
         <ProjectCard image={data.randomQuoteGenerator}/>
         <ProjectCard image={data.weatherViewer}/>
-        {/* <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard /> */}
-      </main>
-    </section>
+        
+      </ProjectFlexedMain>
+    </ContainerSection>
     )}
   />
 )

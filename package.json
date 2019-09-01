@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Stephen Peters",
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.10.2",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.20",
     "gatsby-background-image": "^0.7.3",
@@ -17,12 +18,14 @@
     "gatsby-source-filesystem": "^2.1.7",
     "gatsby-transformer-sharp": "^2.1.21",
     "intersection-observer": "^0.7.0",
+    "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "typeface-source-code-pro": "0.0.71"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

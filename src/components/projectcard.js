@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import Img from "gatsby-image";
 import styled from 'styled-components';
@@ -19,7 +16,7 @@ const Edge = styled.div`
 
 const ImageContainer = styled.div`
     max-width: 100%;
-    background: red;
+    
     grid-row-start: 1;
     grid-row-end: 2;
 `;
