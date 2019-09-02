@@ -85,6 +85,17 @@ const FlexBoxButtonContainer = styled.section`
     width: 100%;
     justify-content: space-between;
     align-content: center;
+
+    @media screen and (max-width: 768px ) 
+    /*add and portrait orientation*/
+    /*For tablets/regular ipads*/{
+        justify-content: space-evenly;
+    }
+
+    @media screen and (max-width: 448px )
+    /*For smartphones, particularly iphones*/{
+        justify-content: center
+    }
     
 `;
 
