@@ -1,5 +1,7 @@
 import React from "react";
-import styled from "styled-components"
+import styled from "styled-components";
+
+import Icon from "../svg-assets/avataaars.svg";
 
 const AboutContainer = styled.section`
     display: grid;
@@ -20,7 +22,7 @@ const AboutContainer = styled.section`
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
         grid-template-columns: 2.5% auto 2.5%;
-        grid-template-rows: 15% 15% 50% 20%;
+        grid-template-rows: 15% 10% 60% 15%;
     }
 
     @media screen and (max-width: 350px )
@@ -77,6 +79,30 @@ const AboutMain = styled.main`
     } 
 `;
 
+
+const SVGAvatar = styled.svg`
+    grid-column: 3/4;
+    grid-row: 2/3;
+    
+    @media screen and (max-width: 768px ) 
+    /*add and portrait orientation*/
+    /*For tablets/regular ipads*/{
+        
+    }
+
+    @media screen and (max-width: 448px )
+    /*For smartphones, particularly iphones*/{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        height: 4rem;
+    }
+
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        
+    } 
+`;
+
 const AboutText = styled.p`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
@@ -101,6 +127,9 @@ const About = () => {
         <AboutContainer>
             <AboutHeading>Whoami</AboutHeading>
             <AboutMain>
+                <SVGAvatar>
+                    <Icon />
+                </SVGAvatar>
                 <AboutText>
                     Hi all! I'm just writing this tidbit for now to see how things look. Nbd.
                 </AboutText>
