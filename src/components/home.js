@@ -15,8 +15,8 @@ const HomeContainer = styled.section`
     display: grid;
     height: 100vh;
     
-    grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background: #03001e; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #03001e, #7303c0, #de3021, #f7b733); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #03001e, #7303c0, #de3021, #f7b733); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -36,43 +36,24 @@ const HomeContainer = styled.section`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-
+        grid-template-rows: 10% fit-content(25%) minmax(10%, 5.3rem) min-content auto;
         grid-template-columns: 10% 80% 10%;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
+        grid-template-rows: 10% fit-content(25%) minmax(10%, 10.3rem) min-content auto;
         grid-template-columns: 10% 80% 10%;
     }
 `;
 
-const HomeMainContent = styled.main`
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 8;
 
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    @media screen and (max-width: 768px ) 
-    /*add and portrait orientation*/
-    /*For tablets/regular ipads*/{
-
-        
-    }
-
-    @media screen and (max-width: 448px )
-    /*For smartphones, particularly iphones*/{
-       
-    }
-    
-`;
 
 const HomeMainText = styled.h1`
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row: 2/3;
     
+    grid-column: 2/3;
+
     color: rgba(245, 245, 245, 1);
     font-family: "Objective Super", "Cortoba", sans-serif;
     font-size: 7.5rem;
@@ -86,7 +67,7 @@ const HomeMainText = styled.h1`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
 
-        font-size: 4.35rem;
+        font-size:5rem;
     }
 
     @media screen and (max-width: 448px )
@@ -96,18 +77,21 @@ const HomeMainText = styled.h1`
 `;
 
 const FlexBoxButtonContainer = styled.section`
-    grid-row-start: 4;
-    grid-row-end: 6;
+    grid-row: 3/4;
+    grid-column: 2/3;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
     
 `;
 
 const HomeMainSubText = styled.h2`
-    grid-row-start: 5;
-    grid-row-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column: 2/3;
     width: 100%;
     height: 1.857rem;
     background: rgba(245, 245, 245, 1);
@@ -117,17 +101,18 @@ const HomeMainSubText = styled.h2`
     padding-left: .2em;
 
     @media screen and (max-width: 648px ){
-        grid-row-start: 5;
-    grid-row-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
         width: 100%;
-        font-size: 1.15rem;
+        font-size: 1.55rem;
     }
 
     @media screen and (max-width: 448px ){
-        grid-row-start: 5;
-        grid-row-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
         width: 100%;
-        font-size: .73rem;
+        font-size: .92rem;
+        
     }
 `;
 
@@ -143,7 +128,7 @@ const Home = () => {
     `)
     return (
         <HomeContainer>
-            <HomeMainContent>
+            
                 <HomeMainText>Stephen Peters </HomeMainText>
                 <FlexBoxButtonContainer>
                     <SplashButton>
@@ -155,13 +140,13 @@ const Home = () => {
                     <SplashButton>
                         <FontAwesomeIcon icon={ faTwitter } size="5x" />  
                     </SplashButton>
-                    <SplashButton>
-                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="5x" />  
-                    </SplashButton> 
+                    {/* <SplashButton>
+                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  
+                    </SplashButton>  */}
                 </FlexBoxButtonContainer>
                 <HomeMainSubText>Web Developer Based in New York City</HomeMainSubText>
                 
-            </HomeMainContent>
+            
         </HomeContainer>
     )
 }
