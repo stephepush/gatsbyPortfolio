@@ -42,8 +42,14 @@ const HomeContainer = styled.section`
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-template-rows: 10% fit-content(25%) minmax(10%, 10.3rem) min-content auto;
-        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 10% fit-content(25%) minmax(10%, 25%) min-content auto;
+        grid-template-columns: minmax(3%, 12%) auto minmax(3%, 12%);
+    }
+
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        grid-template-rows: 10% fit-content(25%) minmax(10%, 45%) min-content auto;
+        grid-template-columns: minmax(3%, 12%) auto minmax(3%, 12%);
     }
 `;
 
@@ -94,7 +100,8 @@ const FlexBoxButtonContainer = styled.section`
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        justify-content: center
+        justify-content: center;
+        z-index: 1;
     }
     
 `;
@@ -124,6 +131,10 @@ const HomeMainSubText = styled.h2`
         width: 100%;
         font-size: .92rem;
         
+    }
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        text-align: center;
     }
 `;
 
@@ -155,7 +166,7 @@ const Home = () => {
                         <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  
                     </SplashButton>  */}
                 </FlexBoxButtonContainer>
-                <HomeMainSubText>Web Developer Based in New York City</HomeMainSubText>
+                <HomeMainSubText>NYC Based Developer</HomeMainSubText>
                 
             
         </HomeContainer>
