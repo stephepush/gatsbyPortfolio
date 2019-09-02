@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components" 
 import SplashButton from "./splashbutton";
-import SplashButtonContainer from "./splashbuttoncontainer";
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -95,6 +95,16 @@ const HomeMainText = styled.h1`
     }
 `;
 
+const FlexBoxButtonContainer = styled.section`
+    grid-row-start: 4;
+    grid-row-end: 6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+`;
+
 const HomeMainSubText = styled.h2`
     grid-row-start: 5;
     grid-row-end: 7;
@@ -135,20 +145,20 @@ const Home = () => {
         <HomeContainer>
             <HomeMainContent>
                 <HomeMainText>Stephen Peters </HomeMainText>
-                <SplashButtonContainer>
-                <SplashButton>
-                    <FontAwesomeIcon icon={ faGithub } size="5x" />  
-                </SplashButton>
-                <SplashButton>
-                    <FontAwesomeIcon icon={ faLinkedin } size="5x" />  
-                </SplashButton>
-                <SplashButton>
-                    <FontAwesomeIcon icon={ faTwitter } size="5x" />  
-                </SplashButton>
-                <SplashButton>
-                    <FontAwesomeIcon icon={ faFreeCodeCamp } size="5x" />  
-                </SplashButton> 
-                </SplashButtonContainer>
+                <FlexBoxButtonContainer>
+                    <SplashButton>
+                        <FontAwesomeIcon icon={ faGithub } size="5x" />  
+                    </SplashButton>
+                    <SplashButton>
+                        <FontAwesomeIcon icon={ faLinkedin } size="5x" />  
+                    </SplashButton>
+                    <SplashButton>
+                        <FontAwesomeIcon icon={ faTwitter } size="5x" />  
+                    </SplashButton>
+                    <SplashButton>
+                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="5x" />  
+                    </SplashButton> 
+                </FlexBoxButtonContainer>
                 <HomeMainSubText>Web Developer Based in New York City</HomeMainSubText>
                 
             </HomeMainContent>
