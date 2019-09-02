@@ -17,10 +17,7 @@ const HomeContainer = styled.section`
     
     grid-template-columns: 10% 50% 30% 10%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background: #03001e; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #03001e, #7303c0, #de3021, #f7b733); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #03001e, #7303c0, #de3021, #f7b733); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*Gradient from https://uigradients.com/. Was based on argon*/
+    background: #85144b;
     @font-face {
         font-family: "Objective Regular";
         src: url("../fonts/Objective-Regular.woff2") format("woff2");

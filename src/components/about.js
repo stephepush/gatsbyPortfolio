@@ -8,8 +8,8 @@ const AboutContainer = styled.section`
     grid-template-columns: 2.5% 15% 50% auto;
     grid-template-rows: 20% 50% 20% 10%;
 
-    background-color: rgba(40, 40, 40, 1);
-    color: rgba(51, 255, 0);
+    background-color: #001f3f;
+    color: #00fe6f;
     font-family: 'Courier New', Courier, monospace;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
