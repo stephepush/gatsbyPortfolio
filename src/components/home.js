@@ -129,8 +129,8 @@ const HomeMainSubText = styled.h2`
         grid-row-start: 4;
         grid-row-end: 5;
         width: 100%;
-        font-size: .92rem;
-        
+        font-size: 1.15rem;
+        text-align: center;
     }
     @media screen and (max-width: 350px )
     /*iphone SE*/{
@@ -166,7 +166,7 @@ const Home = () => {
                         <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  
                     </SplashButton>  */}
                 </FlexBoxButtonContainer>
-                <HomeMainSubText>NYC Based Developer</HomeMainSubText>
+                <HomeMainSubText>A Web Developer in NYC</HomeMainSubText>
                 
             
         </HomeContainer>
