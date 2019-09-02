@@ -6,12 +6,9 @@ import { StaticQuery, graphql } from 'gatsby';
 const ContainerSection = styled.section`
   display: grid;
   grid-template-rows: 9rem auto;
-
-  @media screen 
-  and (min-width: 1599px) {
-    width: 66%;
-    margin: 0 auto;
-  }
+  background-color: #F3E5AB;
+  
+  
 `;
 
 const ProjectHeader = styled.header`
@@ -27,6 +24,11 @@ const ProjectFlexedMain = styled.main`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  @media screen 
+  and (min-width: 1599px) {
+    width: 66%;
+    margin: 0 auto;
+  }
 `;
 
 

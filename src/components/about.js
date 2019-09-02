@@ -33,6 +33,8 @@ const AboutHeading = styled.h2`
     grid-column: 2/3;
     grid-row: 2/3;
     font-weight: 700;
+    justify-self: end;
+    align-self: center;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
@@ -43,6 +45,8 @@ const AboutHeading = styled.h2`
     /*For smartphones, particularly iphones*/{
         grid-column: 2/3;
         grid-row: 2/3;
+        justify-self: center;
+        align-self: center;
     }
 
     @media screen and (max-width: 350px )

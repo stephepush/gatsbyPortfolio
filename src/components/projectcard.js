@@ -12,6 +12,7 @@ const Edge = styled.div`
     font-family: helvetica;
     margin-top: 2%;
     margin: .75rem 0.25rem;
+    background-color: #F8F8FF;
 `;
 
 const ImageContainer = styled.div`
