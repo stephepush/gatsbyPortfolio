@@ -631,7 +631,7 @@ pre tt:after {
 
 /*my css begins here*/
 
-body {
+/* body {
   
   width: calc(100vw - (100vw - 100%));
   
@@ -640,15 +640,15 @@ body {
 
 .portfolio-sections {
   height: 100vh;
-  /*width: 100vw;*/
+  /*width: 100vw;
   margin: 0;
   overflow: hidden;
 } 
-
-#home{
+ */
+/* #home{
   height: 100vh;
   background-image: url('../images/homebg.jpg');
-}
+} */
 
 /* nav{
   position: fixed;
@@ -662,14 +662,14 @@ body {
 } */
 
 
-#about{
+/* #about{
   background-color: dodgerblue;
   
 }
 
 #projects{
   background-color: lavender;
-}
+} */
 
 /* @import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
 
@@ -694,7 +694,7 @@ body {
   justify-content: space-evenly;
 } */
 
-.card__div--desktop{
+/* .card__div--desktop{
   width: 400px;
   
   height: 500px;
@@ -745,15 +745,15 @@ body {
  box-shadow: none;
  border-radius: 0px;
 
-}
+} */
 
 /*Projects Media queries below*/
 
-.container__section{
+/* .container__section{
   display: grid;
   grid-template-rows: 9rem auto;
   /*grid-template-columns: 2% 1fr 1fr 1fr 2%;*/
-}
+/* }
 
 .header {
   display: grid;
@@ -776,11 +776,11 @@ body {
 
 .portfolio-sections{
   display:grid;
-}
+} */ 
 
 /* @import url('https://fonts.googleapis.com/css?family=Fira+Sans'); */
 
-.card-container{
+/* .card-container{
   width: 400px;
   
   height: 500px;
@@ -830,7 +830,7 @@ div.card-buttons {
 
 }
 
-
+ */
 
 /* #home{
   grid-template-rows: 5rem 25% 1fr 1fr 1fr 1fr;
@@ -852,7 +852,7 @@ div.card-buttons {
   grid-column-end: 4;
 } */
 
-#about {
+/* #about {
   grid-template-rows: 5rem repeat(6, 1fr);
   grid-template-columns: repeat(5, 1fr);
 }
@@ -875,17 +875,17 @@ div.card-buttons {
   z-index: 1
 }
 
-
+ */
 /*My css ends here*/
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
-
+ */
 
 /*media query for card component*/
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .card-container{
  
   
@@ -915,11 +915,11 @@ div.card-buttons {
     font-size: 1.5rem;
     font-weight: 800;
   }
-
+ */
 
 /*Projects section media queries @ max-width: 768px*/
 
-.card__div--mobile{
+/* .card__div--mobile{
   width: 87%;
   border: 3px solid green;
   display: grid;
@@ -947,10 +947,10 @@ div.card-buttons {
     font-weight: 800;
   }
 }
-
+ */
 /*Projects media queries @ max-width: 399px*/
 
-@media screen and (max-width: 399px){
+/* @media screen and (max-width: 399px){
   .card__description__paragraph--small {
   font-size: .95rem;
   font-weight: 500;
@@ -960,4 +960,4 @@ div.card-buttons {
   font-size: 1.25rem;
   font-weight: 800;
 }
-}
+} */

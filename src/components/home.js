@@ -2,6 +2,13 @@ import React from "react";
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components" 
 import SplashButton from "./splashbutton";
+import SplashButtonContainer from "./splashbuttoncontainer";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTwitter, faGithub, faLinkedin, faFreeCodeCamp } from "@fortawesome/free-brands-svg-icons";
+
+
 
 const HomeContainer = styled.section`
 
@@ -45,6 +52,9 @@ const HomeMainContent = styled.main`
     grid-row-start: 2;
     grid-row-end: 8;
 
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
@@ -60,6 +70,9 @@ const HomeMainContent = styled.main`
 `;
 
 const HomeMainText = styled.h1`
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
     color: rgba(245, 245, 245, 1);
     font-family: "Objective Super", "Cortoba", sans-serif;
     font-size: 7.5rem;
@@ -73,17 +86,20 @@ const HomeMainText = styled.h1`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
 
-        font-size: 5.95rem;
+        font-size: 4.35rem;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        font-size: 3.5rem;
+        font-size: 3.35rem;
     }
 `;
 
 const HomeMainSubText = styled.h2`
-    width: 35rem;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    width: 100%;
+    height: 1.857rem;
     background: rgba(245, 245, 245, 1);
     color: rgba(0,0,0, 0.6);
     margin-top: 0;
@@ -91,11 +107,15 @@ const HomeMainSubText = styled.h2`
     padding-left: .2em;
 
     @media screen and (max-width: 648px ){
+        grid-row-start: 5;
+    grid-row-end: 7;
         width: 100%;
         font-size: 1.15rem;
     }
 
     @media screen and (max-width: 448px ){
+        grid-row-start: 5;
+        grid-row-end: 7;
         width: 100%;
         font-size: .73rem;
     }
@@ -115,10 +135,22 @@ const Home = () => {
         <HomeContainer>
             <HomeMainContent>
                 <HomeMainText>Stephen Peters </HomeMainText>
+                <SplashButtonContainer>
+                <SplashButton>
+                    <FontAwesomeIcon icon={ faGithub } size="5x" />  
+                </SplashButton>
+                <SplashButton>
+                    <FontAwesomeIcon icon={ faLinkedin } size="5x" />  
+                </SplashButton>
+                <SplashButton>
+                    <FontAwesomeIcon icon={ faTwitter } size="5x" />  
+                </SplashButton>
+                <SplashButton>
+                    <FontAwesomeIcon icon={ faFreeCodeCamp } size="5x" />  
+                </SplashButton> 
+                </SplashButtonContainer>
                 <HomeMainSubText>Web Developer Based in New York City</HomeMainSubText>
-                <SplashButton></SplashButton>
-                <SplashButton></SplashButton>
-                <SplashButton></SplashButton>
+                
             </HomeMainContent>
         </HomeContainer>
     )

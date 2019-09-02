@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 const Button = styled.button`
 
-    height: 3.5rem;
-    width: 15rem;
+    height: fit;
+    width: fit;
+    background: transparent;
     -webkit-appearance: none; 
     /* ^why? 
     Explanation: 
@@ -15,24 +16,22 @@ const Button = styled.button`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
         height: 3rem;
-        width: 75%;
+        
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
         height: 3rem;
-        width: 85%;
+    
     }
 `;
 
 
-const SplashButton = () => {
+const SplashButton = (props) => {
     return (
-        <div>
-            <Button>
-                These are test buttons
-            </Button>
-        </div>
+        <Button>
+            {props.children}
+        </Button>
     )
 }
 export default SplashButton;
