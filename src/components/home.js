@@ -69,13 +69,20 @@ const HomeMainText = styled.h1`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-
+        padding-top: 10rem;
         font-size:5rem;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
+        padding-top: 5rem;
         font-size: 3.35rem;
+    }
+
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        padding-top: 2.5rem;
+        
     }
 `;
 

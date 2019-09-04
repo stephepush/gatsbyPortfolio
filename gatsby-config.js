@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Hi, I'm Stephen`,
+    title: `Stephen's Web Developer Portfolio`,
     description: `I'm a developer based in NYC. Welcome to my portfolio of projects`,
     author: `Stephen Peters`,
   },
@@ -13,6 +13,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/svg-assets/`
+        }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,

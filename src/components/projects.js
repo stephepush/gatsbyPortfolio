@@ -5,30 +5,57 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const ContainerSection = styled.section`
   display: grid;
-  grid-template-rows: 9rem auto;
+  grid-template-rows: 6rem 1fr 6rem;
+  
   background-color: #F3E5AB;
   
+  @media screen and (min-width: 1599px) {
+    grid-template-columns: 2fr 10fr 2fr;
+  }
+
+  @media screen and (max-width: 768px ) 
+    /*add and portrait orientation*/
+    /*For tablets/regular ipads*/{
+      grid-template-rows: 4rem 1fr 2.5rem;
+       
+       
+       
+  }
   
 `;
 
 const ProjectHeader = styled.header`
-  display: grid;
-  grid-template-rows: 5rem 4rem;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row: 1/2;
 `;
 
 const ProjectFlexedMain = styled.main`
-  grid-row-start: 3;
+  grid-row: 2/3;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  @media screen 
-  and (min-width: 1599px) {
-    width: 66%;
-    margin: 0 auto;
+  @media screen and (min-width: 1599px) {
+    grid-column: 2/3;
   }
+
+  @media screen and (max-width: 768px ) 
+    /*add and portrait orientation*/
+    /*For tablets/regular ipads*/{
+       
+       
+       
+       
+    }
+
+    @media screen and (max-width: 448px )
+    /*For smartphones, particularly iphones*/{
+        
+    }
+
+    @media screen and (max-width: 350px )
+    /*iphone SE and other small phones*/{
+       
+    }
 `;
 
 

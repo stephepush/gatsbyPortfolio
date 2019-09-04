@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import Icon from "../svg-assets/avataaars.svg";
+/* import Avataaars from "../svg-assets/"; */
 
 const AboutContainer = styled.section`
     display: grid;
@@ -127,9 +127,9 @@ const About = () => {
         <AboutContainer>
             <AboutHeading>Whoami</AboutHeading>
             <AboutMain>
-                <SVGAvatar>
-                    <Icon />
-                </SVGAvatar>
+                {/* <SVGAvatar>
+                    <Avataaars />
+                </SVGAvatar> */}
                 <AboutText>
                     Hi all! I'm just writing this tidbit for now to see how things look. Nbd.
                 </AboutText>
