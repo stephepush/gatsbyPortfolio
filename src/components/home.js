@@ -75,7 +75,7 @@ const HomeMainText = styled.h1`
     }
 
     @media screen and (max-width: 768px )
-    /*add and portrait orientation*/
+    
     /*For tablets/regular ipads*/{
         padding-top: 1.25rem;
         font-size:4.75rem;
@@ -174,9 +174,6 @@ const Home = () => {
                     <SplashButton>
                         <FontAwesomeIcon icon={ faTwitter } size="5x" />  
                     </SplashButton>
-                    {/* <SplashButton>
-                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  
-                    </SplashButton>  */}
                 </FlexBoxButtonContainer>
                 <HomeMainSubText>A Web Developer in NYC</HomeMainSubText>
                 
