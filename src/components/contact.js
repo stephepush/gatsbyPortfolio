@@ -13,7 +13,7 @@ const ContactSection = styled.section`
     height: 75vh;
 
     grid-template-columns: 2.5% 8.5% 80% 10%;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-rows: 20% 60%  20%;
     color: #384688;
     background-color: #DFF0D8;
 
