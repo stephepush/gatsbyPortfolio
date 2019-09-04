@@ -62,6 +62,13 @@ const ProjectFlexedMain = styled.main`
 const Projects = () => (
   <StaticQuery query={graphql`
     {
+      pomodoroTimer: file(relativePath: {eq: "pomodoroTimer.png"}){
+        childImageSharp {
+          fluid(maxWidth: 1000){
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       drumMachine: file(relativePath: {eq: "drumMachine.png"}){
         childImageSharp {
           fluid(maxWidth: 1000){
@@ -76,13 +83,7 @@ const Projects = () => (
           }
         }
       }
-      pomodoroTimer: file(relativePath: {eq: "pomodoroTimer.png"}){
-        childImageSharp {
-          fluid(maxWidth: 1000){
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+      
       randomQuoteGenerator: file(relativePath: {eq: "randomQuoteGenerator.png"}){
         childImageSharp {
           fluid(maxWidth: 1000){

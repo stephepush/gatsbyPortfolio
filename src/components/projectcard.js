@@ -2,13 +2,19 @@ import React from 'react';
 import Img from "gatsby-image";
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+
+
 
 const Edge = styled.div`
     width: 400px;
     height: 500px;
     border: 3px solid gray;
     display: grid;
-    grid-template-rows: 5fr 1.5fr 2.5fr 2fr ;
+    grid-template-rows: 6fr 1.5fr 2.5fr 2fr ;
     font-family: helvetica;
     margin-top: 2%;
     margin: .75rem 0.25rem;
@@ -31,6 +37,7 @@ const Edge = styled.div`
         width: 100%;
         margin-bottom: 50%;
         grid-template-rows: 6fr 1.5fr 2.5fr 2fr ;
+        border: 1px solid #010101;
     }
 
     @media screen and (max-width: 350px )
@@ -199,8 +206,14 @@ function ProjectCard(props) {
                     </Description>
                 </ParagraphDiv>
                 <ButtonDiv>
-                    <Button>View Project</Button>
-                    <Button>View on Github</Button>
+                    <Button>
+                        <FontAwesomeIcon 
+                        icon={ faExternalLinkAlt } size="2x" />
+                    </Button>
+                    <Button>
+                    <FontAwesomeIcon 
+                    icon={ faGithub } size="2x" />
+                    </Button>
                 </ButtonDiv>
             </Edge>
         
