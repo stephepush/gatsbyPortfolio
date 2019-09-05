@@ -1,8 +1,21 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
+import SlideBurgerMenu from './burgermenu';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
 
+const Desktop = ({ children }) => {
+    const isDesktop = useMediaQuery({ minWidth: 992 })
+    return isDesktop ? children : null
+  }
+const Tablet = ({ children }) => {
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+    return isTablet ? children : null
+}
+const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 })
+    return isMobile ? children : null
+}
  
 const StyledNav = styled.nav`
     display: grid;
@@ -33,20 +46,27 @@ const StyledAnchorLink = styled(AnchorLink)`
 `;
 
 const Nav = () => (
-    
-    <StyledNav>
-        {/* Todo: Change the text styling in the anchorlink elems */}
-        <SectionLinkContainer>
-            
-            <StyledAnchorLink href='#about'>About</StyledAnchorLink>
-            <StyledAnchorLink href='#projects'>Projects</StyledAnchorLink>
-            <StyledAnchorLink href='#contact'>Contact</StyledAnchorLink>
-        </SectionLinkContainer>
-           
-        
-    </StyledNav> 
-
-
+    <div>    
+        <Desktop>
+            <StyledNav>
+                {/* Todo: Change the text styling in the anchorlink elems */}
+                <SectionLinkContainer>
+                    
+                    <StyledAnchorLink href='#about'>About</StyledAnchorLink>
+                    <StyledAnchorLink href='#projects'>Projects</StyledAnchorLink>
+                    <StyledAnchorLink href='#contact'>Contact</StyledAnchorLink>
+                </SectionLinkContainer>
+                
+                
+            </StyledNav> 
+        </Desktop>
+        <Mobile>
+            <SlideBurgerMenu />
+        </Mobile>
+        <Tablet>
+            <SlideBurgerMenu />
+        </Tablet>
+    </div>
 );
 
 export default Nav;
