@@ -4,6 +4,9 @@ import SlideBurgerMenu from './burgermenu';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
 
+
+
+
 const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 992 })
     return isDesktop ? children : null
@@ -29,6 +32,7 @@ const StyledNav = styled.nav`
     max-width: 100%;
     z-index: 999;
     color: rgba(255,201,0,1);
+    overflow: hidden;
 `;
 
 const SectionLinkContainer = styled.div`
@@ -45,6 +49,8 @@ const StyledAnchorLink = styled(AnchorLink)`
     
 `;
 
+
+  
 const Nav = () => (
     <div>    
         <Desktop>
@@ -61,7 +67,7 @@ const Nav = () => (
             </StyledNav> 
         </Desktop>
         <Mobile>
-            <SlideBurgerMenu />
+            <SlideBurgerMenu  />
         </Mobile>
         <Tablet>
             <SlideBurgerMenu />
