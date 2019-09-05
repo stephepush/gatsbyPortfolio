@@ -1,6 +1,8 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from "styled-components";
+
  
 const StyledNav = styled.nav`
     display: grid;
@@ -31,6 +33,7 @@ const StyledAnchorLink = styled(AnchorLink)`
 `;
 
 const Nav = () => (
+    
     <StyledNav>
         {/* Todo: Change the text styling in the anchorlink elems */}
         <SectionLinkContainer>
