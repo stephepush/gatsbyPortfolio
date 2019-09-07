@@ -119,27 +119,29 @@ const FlexBoxButtonContainer = styled.section`
 `;
 
 const HomeMainSubText = styled.h2`
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column: 2/3;
-    width: 100%;
-    height: 1.857rem;
-    background: rgba(245, 245, 245, 1);
-    color: rgba(0,0,0, 0.6);
-    margin-top: 0;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    background: white;
+    
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+    writing-mode: vertical-rl;
+    
+    
+    
     margin-bottom: 0;
     padding-left: .2em;
 
     @media screen and (max-width: 648px ){
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row: 4/5;
         width: 100%;
         font-size: 1.55rem;
     }
 
     @media screen and (max-width: 448px ){
-        grid-row-start: 4;
-        grid-row-end: 5;
+        grid-row: 4/5;
         width: 100%;
         font-size: 1.15rem;
         text-align: center;
@@ -163,7 +165,7 @@ const Home = () => {
     return (
         <HomeContainer>
             
-                <HomeMainText>Stephen Peters </HomeMainText>
+                <HomeMainText>Stephen <br /> Peters </HomeMainText>
                 <FlexBoxButtonContainer>
                     <SplashButton>
                         <FontAwesomeIcon icon={ faGithub } size="5x" />  
