@@ -18,9 +18,13 @@ const ContainerSection = styled.section`
     /*For tablets/regular ipads*/{
       grid-template-rows: 4rem 1fr 2.5rem;
        
-       
+      
        
   }
+  @media screen and (max-width: 448px )
+    /*For smartphones, particularly iphones*/{
+        
+    }
   
 `;
 
@@ -91,7 +95,7 @@ const Projects = () => (
           }
         }
       }
-      weatherViewer: file(relativePath: {eq: "weatherViewer.jpg"}){
+      weatherViewer: file(relativePath: {eq: "weatherViewer.png"}){
         childImageSharp {
           fluid(maxWidth: 1000){
             ...GatsbyImageSharpFluid
@@ -102,8 +106,8 @@ const Projects = () => (
   `} render ={(data) => (
     <ContainerSection>
       <ProjectHeader>
-        <div class="header__gap"></div>
-        <h1 class="section__header__h1">Cards</h1>
+        <div className="header__gap"></div>
+        <h1 className="section__header__h1">Cards</h1>
       </ProjectHeader>
       <ProjectFlexedMain>
         <ProjectCard image={data.drumMachine} />

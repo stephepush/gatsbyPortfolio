@@ -28,6 +28,9 @@ const Button = styled.button`
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
         height: fit;
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
     
     }
 `;

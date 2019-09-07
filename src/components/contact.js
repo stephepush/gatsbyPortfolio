@@ -101,8 +101,25 @@ const FlexboxContactButtonContainer = styled.section`
     grid-column: 3/4;
     display: flex;
     flex-direction: row;
-    flex:wrap;
+    flex-wrap: wrap;
     width: 100%;
+
+    @media screen and (max-width: 768px )
+    
+    /*For tablets/regular ipads*/{
+        
+    }
+
+    @media screen and (max-width: 448px )
+    /*For smartphones, particularly iphones*/{
+        
+    }
+
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        
+        
+    }
 `;
 
 const Contacts = () => {
@@ -117,13 +134,13 @@ const Contacts = () => {
             </ContactText>
             <FlexboxContactButtonContainer>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faGithub } size="5x" />  
+                        <FontAwesomeIcon icon={ faGithub } size="4x" />  
                     </SplashButton>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faLinkedin } size="5x" />  
+                        <FontAwesomeIcon icon={ faLinkedin } size="4x" />  
                     </SplashButton>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faTwitter } size="5x" />  
+                        <FontAwesomeIcon icon={ faTwitter } size="4x" />  
                     </SplashButton>
                     <SplashButton>
                         <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  

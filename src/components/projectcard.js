@@ -12,13 +12,17 @@ import { faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 const Edge = styled.div`
     width: 400px;
     height: 500px;
-    border: 3px solid gray;
+    
     display: grid;
     grid-template-rows: 6fr 1.5fr 2.5fr 2fr ;
     font-family: helvetica;
     margin-top: 2%;
     margin: .75rem 0.25rem;
     background-color: #F8F8FF;
+
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
+    box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
     
 
     @media screen and (max-width: 768px ) 
@@ -26,30 +30,33 @@ const Edge = styled.div`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
        width: 40%;
-       height: 425px;
+       height: 450px;
        
        
        
     }
 
-    @media screen and (max-width: 448px )
+    @media screen and (max-width: 500px )
     /*For smartphones, particularly iphones*/{
-        width: 100%;
+        width: 95%;
         margin-bottom: 50%;
-        grid-template-rows: 6fr 1.5fr 2.5fr 2fr ;
-        border: 1px solid #010101;
+        grid-template-rows: 5fr 1.2fr 2.5fr 2fr ;
+        align-self: center;
+        overflow: hidden;
+        
     }
 
     @media screen and (max-width: 350px )
     /*iphone SE and other small phones*/{
         margin-bottom: 50%;
-        grid-template-rows: 6fr 1.5fr 2.5fr 2fr ;
+        grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
     }
 `;
 
 const ImageContainer = styled.div`
-    height: 100%;
-    
+    max-height: fit;
+    overflow: hidden;
+    background-color: gray;
     grid-row-start: 1;
     grid-row-end: 2;
 
@@ -61,9 +68,9 @@ const ImageContainer = styled.div`
        
     }
 
-    @media screen and (max-width: 448px )
+    @media screen  and (max-width: 500px ) 
     /*For smartphones, particularly iphones*/{
-        height: 100%;
+        max-height: 100%;
         overflow: hidden;
     }
 
@@ -146,12 +153,13 @@ const Description = styled.p`
 const ButtonDiv = styled.div`
     display: flex;
     grid-row: 4/5;
-    justify-content: center;
+    justify-content: flex-start;
 
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-       
+        justify-content: space-evenly;
+       flex-wrap: nowrap;
     }
 
     @media screen and (max-width: 448px )
@@ -166,15 +174,22 @@ const ButtonDiv = styled.div`
 `;
 
 const Button = styled.button`
-    border: 1px solid black;
-    width: 7.5rem;
+    
+    background: transparent;
+    cursor: pointer;
     padding: .5rem 0;
-    margin: .5rem 1rem;
+    margin: .3rem 1rem;
 
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-       
+        cursor: pointer;
+        background: transparent;
+        
+        justify-content: flex-start;
+        padding: .15rem .1rem;
+        margin-bottom: .5rem;
+        margin-top: 0;
     }
 
     @media screen and (max-width: 448px )
@@ -184,7 +199,7 @@ const Button = styled.button`
 
     @media screen and (max-width: 350px )
     /*iphone SE and other small phones*/{
-       
+        
     }
 `;
 
@@ -208,11 +223,11 @@ function ProjectCard(props) {
                 <ButtonDiv>
                     <Button>
                         <FontAwesomeIcon 
-                        icon={ faExternalLinkAlt } size="2x" />
+                        icon={ faExternalLinkAlt } size="3x" />
                     </Button>
                     <Button>
                     <FontAwesomeIcon 
-                    icon={ faGithub } size="2x" />
+                    icon={ faGithub } size="3x" />
                     </Button>
                 </ButtonDiv>
             </Edge>
