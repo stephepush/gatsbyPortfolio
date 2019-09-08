@@ -12,8 +12,8 @@ const ContactSection = styled.section`
     display: grid;
     height: 75vh;
 
-    grid-template-columns: 2.5% 8.5% 80% 10%;
-    grid-template-rows: 20% 60%  20%;
+    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: #384688;
     background-color: #DFF0D8;
 
@@ -43,11 +43,21 @@ const ContactSection = styled.section`
 `;
 
 const ContactHeading = styled.h2`
-    grid-column: 2/3;
-    grid-row: 2/3;
-    font-weight: 700;
+       grid-row: 2/4;
+    grid-column: 1/2;
+    background-color: white;
+    width: 1.60rem;
+    
+    margin-right: 0;
+    margin-left: 0;
     justify-self: end;
-    align-self: center;
+    text-align: center;
+    writing-mode: vertical-rl;
+    
+    
+    
+    margin-bottom: 0;
+    padding-left: .2em;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{

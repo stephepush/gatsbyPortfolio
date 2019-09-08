@@ -7,8 +7,8 @@ const AboutContainer = styled.section`
     display: grid;
     height: 100vh;
 
-    grid-template-columns: 2.5% 15% 50% auto;
-    grid-template-rows: 20% 50% 20% 10%;
+    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     background-color: #3E412C;
     color: #00fe6f;
@@ -21,8 +21,7 @@ const AboutContainer = styled.section`
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-template-columns: 2.5% auto 2.5%;
-        grid-template-rows: 15% 10% 60% 15%;
+
     }
 
     @media screen and (max-width: 350px )
@@ -33,10 +32,21 @@ const AboutContainer = styled.section`
 
 const AboutHeading = styled.h2`
     grid-column: 2/3;
-    grid-row: 2/3;
-    font-weight: 700;
+    grid-row: 2/4;
+    grid-column: 1/2;
+    background-color: white;
+    width: 1.60rem;
+    
+    margin-right: 0;
+    margin-left: 0;
     justify-self: end;
-    align-self: center;
+    text-align: center;
+    writing-mode: vertical-rl;
+    
+    
+    
+    margin-bottom: 0;
+    padding-left: .2em;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{

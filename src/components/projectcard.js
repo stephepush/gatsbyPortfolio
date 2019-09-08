@@ -25,18 +25,19 @@ const Edge = styled.div`
     box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
     
 
-    @media screen and (max-width: 768px ) 
+    @media screen and (max-width: 877px ) 
     and (orientation: portrait)
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-       width: 40%;
+       grid-template-rows: 3.75fr 1fr 2.5fr 2fr ;
+       width: 45%;
        height: 450px;
        
        
        
     }
 
-    @media screen and (max-width: 500px )
+    @media screen and (max-width: 700px )
     /*For smartphones, particularly iphones*/{
         width: 95%;
         margin-bottom: 50%;
@@ -49,6 +50,7 @@ const Edge = styled.div`
     @media screen and (max-width: 350px )
     /*iphone SE and other small phones*/{
         margin-bottom: 50%;
+        width: 100%;
         grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
     }
 `;
@@ -60,10 +62,14 @@ const ImageContainer = styled.div`
     grid-row-start: 1;
     grid-row-end: 2;
 
-    @media screen and (max-width: 768px ) 
+    @media screen and (max-width: 834px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-       
+    max-height: fit-content;
+    overflow: hidden;
+    background-color: gray;
+    grid-row-start: 1;
+    grid-row-end: 2;
        
        
     }

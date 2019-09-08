@@ -15,7 +15,7 @@ const HomeContainer = styled.section`
     display: grid;
     height: 100vh;
     
-    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-columns: 10% 50% auto 10%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background: #85144b;
     @font-face {
@@ -34,7 +34,7 @@ const HomeContainer = styled.section`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
         grid-template-rows: 10% fit-content(25%) minmax(10%, 5.3rem) min-content auto;
-        grid-template-columns: 10% 80% 10%;
+        grid-template-columns: 15% 50% auto 10%;
     }
 
     @media screen and (max-width: 448px )
@@ -118,14 +118,15 @@ const FlexBoxButtonContainer = styled.section`
     
 `;
 
-const HomeMainSubText = styled.h2`
+const HomeMainSubHeading = styled.h2`
     grid-row: 2/4;
     grid-column: 1/2;
-    background: white;
-    
+    background-color: white;
+    width: 1.60rem;
+    font-size: 1.25rem;
     margin-right: 0;
     margin-left: 0;
-    justify-content: center;
+    justify-self: end;
     text-align: center;
     writing-mode: vertical-rl;
     
@@ -135,9 +136,10 @@ const HomeMainSubText = styled.h2`
     padding-left: .2em;
 
     @media screen and (max-width: 648px ){
-        grid-row: 4/5;
-        width: 100%;
-        font-size: 1.55rem;
+        grid-column: 1/2;
+        grid-row: 2;
+        width: 1rem;
+        font-size: 1.10rem;
     }
 
     @media screen and (max-width: 448px ){
@@ -177,7 +179,7 @@ const Home = () => {
                         <FontAwesomeIcon icon={ faTwitter } size="5x" />  
                     </SplashButton>
                 </FlexBoxButtonContainer>
-                <HomeMainSubText>A Web Developer in NYC</HomeMainSubText>
+                <HomeMainSubHeading>A Web Developer in NYC</HomeMainSubHeading>
                 
             
         </HomeContainer>

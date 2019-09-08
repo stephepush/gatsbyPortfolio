@@ -5,18 +5,18 @@ import { StaticQuery, graphql } from 'gatsby';
 
 const ContainerSection = styled.section`
   display: grid;
-  grid-template-rows: 6rem 1fr 6rem;
-  
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 10rem 1fr 5rem;
   background-color: #F3E5AB;
   
   @media screen and (min-width: 1599px) {
-    grid-template-columns: 2fr 10fr 2fr;
+    grid-template-columns: 10% 80% 10%;
   }
 
-  @media screen and (max-width: 768px ) 
+  @media screen and (max-width: 1599px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-      grid-template-rows: 4rem 1fr 2.5rem;
+      grid-template-columns: 1fr auto;
        
       
        
@@ -26,10 +26,44 @@ const ContainerSection = styled.section`
         
     }
   
+    @media screen and (max-width: 350px )
+    /*iphone SE and other small phones*/{
+        margin-bottom: 50%;
+        grid-template-rows: 4.25fr auto 2fr ;
+        grid-template-columns: auto;
+    }
 `;
 
-const ProjectHeader = styled.header`
-  grid-row: 1/2;
+const ProjectSectionHeader = styled.h2`
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: white;
+    width: 1.60rem;
+    height: 12rem;
+    margin-right: 0;
+    margin-left: 0;
+    justify-self: end;
+    text-align: center;
+    writing-mode: vertical-rl;
+    margin-bottom: 0;
+    padding-left: .2em;
+
+    @media screen and (max-width: 648px ){
+        grid-row: 4/5;
+        width: 100%;
+        font-size: 1.55rem;
+    }
+
+    @media screen and (max-width: 448px ){
+        grid-row: 4/5;
+        width: 100%;
+        font-size: 1.15rem;
+        text-align: center;
+    }
+    @media screen and (max-width: 350px )
+    /*iphone SE*/{
+        text-align: center;
+    }
 `;
 
 const ProjectFlexedMain = styled.main`
@@ -38,6 +72,7 @@ const ProjectFlexedMain = styled.main`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  grid-column: 2/3;
   @media screen and (min-width: 1599px) {
     grid-column: 2/3;
   }
@@ -51,9 +86,18 @@ const ProjectFlexedMain = styled.main`
        
     }
 
-    @media screen and (max-width: 448px )
+    @media screen and (max-width: 800px ) 
+    /*add and portrait orientation*/
+    /*For tablets/regular ipads*/{
+       
+       
+       
+       
+    }
+
+    @media screen and (max-width: 568px )
     /*For smartphones, particularly iphones*/{
-        
+        grid-column: 1;
     }
 
     @media screen and (max-width: 350px )
@@ -105,10 +149,9 @@ const Projects = () => (
     }
   `} render ={(data) => (
     <ContainerSection>
-      <ProjectHeader>
-        <div className="header__gap"></div>
-        <h1 className="section__header__h1">Cards</h1>
-      </ProjectHeader>
+      <ProjectSectionHeader>
+        Projects
+      </ProjectSectionHeader>
       <ProjectFlexedMain>
         <ProjectCard image={data.drumMachine} />
         <ProjectCard image={data.markdownEditor}/>
