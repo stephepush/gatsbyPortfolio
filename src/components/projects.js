@@ -17,19 +17,26 @@ const ContainerSection = styled.section`
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
       grid-template-columns: 1fr auto;
-       
+      grid-template-columns: 10% 80% 10%; 
       
        
   }
+
+  @media screen and (max-width: 700px )
+    /*For smartphones, particularly iphones*/{
+      grid-template-columns: 1fr; 
+        
+    }
+
   @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        
+      grid-template-rows: 3rem 1fr .5rem;
     }
   
     @media screen and (max-width: 350px )
     /*iphone SE and other small phones*/{
-        margin-bottom: 50%;
-        grid-template-rows: 4.25fr auto 2fr ;
+        
+        
         grid-template-columns: auto;
     }
 `;
@@ -55,8 +62,9 @@ const ProjectSectionHeader = styled.h2`
     }
 
     @media screen and (max-width: 448px ){
-        grid-row: 4/5;
-        width: 100%;
+        grid-row: 1;
+        writing-mode: horizontal-tb;
+        background: none;
         font-size: 1.15rem;
         text-align: center;
     }

@@ -31,8 +31,8 @@ const AboutContainer = styled.section`
 `;
 
 const AboutHeading = styled.h2`
-    grid-column: 2/3;
-    grid-row: 2/4;
+    
+    grid-row: 2/3;
     grid-column: 1/2;
     background-color: white;
     width: 1.60rem;
@@ -50,20 +50,25 @@ const AboutHeading = styled.h2`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-        
+        grid-column: 1/2;
+        grid-row: 2/5;
+        width: 50%;
+        height: fit-content;
+        font-size: 1.15rem;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-column: 2/3;
-        grid-row: 2/3;
-        justify-self: center;
-        align-self: center;
+        margin-top: 5.75rem;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
+        text-align: center;
     }
 
     @media screen and (max-width: 350px )
     /*iphone SE*/{
-        
+        margin-top: 3.25rem;
+        text-align: center;
     } 
 `;
 
