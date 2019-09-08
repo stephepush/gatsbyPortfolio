@@ -43,7 +43,7 @@ const ContactSection = styled.section`
 `;
 
 const ContactHeading = styled.h2`
-       grid-row: 2/4;
+    grid-row: 2/4;
     grid-column: 1/2;
     background-color: white;
     width: 1.60rem;
@@ -80,7 +80,7 @@ const ContactHeading = styled.h2`
 
 const ContactText = styled.p`
     grid-row: 1/2;
-    grid-column: 3/4;
+    grid-column: 2/3;
     @media screen and (max-width: 768px )
     and (orientation: portrait) 
     /*add and portrait orientation*/
@@ -108,7 +108,7 @@ const ContactText = styled.p`
 
 const FlexboxContactButtonContainer = styled.section`
     grid-row: 2/3;
-    grid-column: 3/4;
+    grid-column: 2/3;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

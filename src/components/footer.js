@@ -9,6 +9,7 @@ import { faHandSpock } from "@fortawesome/free-solid-svg-icons";
 
 const FooterContainer = styled.footer`
     display: grid;
+    width: fit-content;
     grid-template-columns: 10% 50% 30% 10%;
     grid-template-rows: 1rem 1rem 10px;
 `;

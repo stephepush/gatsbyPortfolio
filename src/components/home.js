@@ -33,20 +33,20 @@ const HomeContainer = styled.section`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-        grid-template-rows: 10% fit-content(25%) minmax(10%, 5.3rem) min-content auto;
-        grid-template-columns: 15% 50% auto 10%;
+        grid-template-columns: 10% 50% auto 10%;
+        grid-template-rows: 1fr auto auto 1fr 1fr 1fr 1fr 1fr;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-template-rows: 10% fit-content(25%) minmax(10%, 25%) min-content auto;
-        grid-template-columns: minmax(3%, 12%) auto minmax(3%, 12%);
+        grid-template-columns: 10% 50% auto 10%;
+        grid-template-rows: 1fr auto auto 1fr 1fr 1fr 1fr 1fr;
     }
 
     @media screen and (max-width: 350px )
     /*iphone SE*/{
-        grid-template-rows: 10% fit-content(25%) minmax(10%, 45%) min-content auto;
-        grid-template-columns: minmax(3%, 12%) auto minmax(3%, 12%);
+        grid-template-columns: 10% 50% auto 10%;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 `;
 
@@ -112,6 +112,7 @@ const FlexBoxButtonContainer = styled.section`
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
+        grid-column: 2/4;
         justify-content: center;
         z-index: 1;
     }
@@ -137,19 +138,21 @@ const HomeMainSubHeading = styled.h2`
 
     @media screen and (max-width: 648px ){
         grid-column: 1/2;
-        grid-row: 2;
-        width: 1rem;
-        font-size: 1.10rem;
+        grid-row: 2/5;
+        width: 50%;
+        height: fit-content;
+        font-size: 1.15rem;
     }
 
     @media screen and (max-width: 448px ){
-        grid-row: 4/5;
-        width: 100%;
-        font-size: 1.15rem;
+        margin-top: 5.75rem;
+        padding-top: .3rem;
+        padding-bottom: .3rem;
         text-align: center;
     }
     @media screen and (max-width: 350px )
     /*iphone SE*/{
+        margin-top: 3.25rem;
         text-align: center;
     }
 `;

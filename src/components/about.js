@@ -69,7 +69,7 @@ const AboutHeading = styled.h2`
 
 const AboutMain = styled.main`
 
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 2/3;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
