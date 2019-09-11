@@ -37,6 +37,9 @@ const Edge = styled.div`
        
     }
 
+    
+
+
     @media screen and (max-width: 700px )
     /*For smartphones, particularly iphones*/{
         width: 95%;
@@ -53,6 +56,8 @@ const Edge = styled.div`
         width: 100%;
         grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
     }
+
+
 `;
 
 const ImageContainer = styled.div`
