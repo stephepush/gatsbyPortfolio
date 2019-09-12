@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
 
 /* import Avataaars from "../svg-assets/"; */
 
@@ -137,20 +138,42 @@ const AboutText = styled.p`
     } 
 `;
 
-const About = () => {
+/* const About = () => {
     return (
         <AboutContainer>
             <AboutHeading>Whoami</AboutHeading>
             <AboutMain>
-                {/* <SVGAvatar>
-                    <Avataaars />
-                </SVGAvatar> */}
+                
                 <AboutText>
                     Hi all! I'm just writing this tidbit for now to see how things look. Nbd.
                 </AboutText>
             </AboutMain>
         </AboutContainer>
     )
-}
+} */
 
+const About = () => (
+    <StaticQuery query={graphql`
+        {
+            allTextJson {
+            edges {
+                node {
+                about
+                }
+            }
+            }
+        }
+    `} render={(data) =>(
+        <AboutContainer>
+            <AboutHeading>Whoami</AboutHeading>
+            <AboutMain>
+                
+                <AboutText >
+                   {data.aboutPage}
+                </AboutText>
+            </AboutMain>
+        </AboutContainer> 
+    )}
+ />
+)
 export default About;

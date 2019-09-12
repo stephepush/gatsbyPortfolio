@@ -1,6 +1,6 @@
-[
-    {
-    "about": "Hi, I'm Stephen and I'm a self taught web developer. In the past, I've used vanilla HTML, CSS, and JS to build things, and I also dabbled with PHP and MySQL. Right now I'm building things using the React ecosystem. I have a few projects I've built with React (as well as some I built using vanilla javascript), and in the near future I'd like to take a deeper dive into React Hooks, the React Context API, Next.JS, and decoupled CMS' with react front-ends by utilizing those technologies in projects.\n In my spare time I enjoy cooking, especially perfecting pizza dough technique, and I've also been on a bit of a retro gaming kick.",
+"aboutPage":
+    [{
+    "about": "Hi, I'm Stephen and I'm a self taught web developer. In the past, I've used vanilla HTML, CSS, and JS to build things, and I also dabbled with PHP and MySQL. Right now I'm building things using the React ecosystem. I have a few projects I've built with React (as well as some I built using vanilla javascript), and in the near future I'd like to take a deeper dive into React Hooks, the React Context API, Next.JS, and decoupled CMS' with react front-ends by utilizing those technologies in projects.\n In my spare time I enjoy cooking, especially perfecting pizza dough technique, and I've also been on a bit of a retro gaming kick."}],
     "projects": [
             {
                 "name": "Drum Machine",
@@ -35,4 +35,3 @@
         ]
     }
     
-]
