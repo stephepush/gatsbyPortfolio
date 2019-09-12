@@ -155,21 +155,20 @@ const AboutText = styled.p`
 const About = () => (
     <StaticQuery query={graphql`
         {
-            allTextJson {
-            edges {
-                node {
-                about
+            about: allTextJson {
+                edges {
+                    node {
+                    about
+                    }
                 }
-            }
             }
         }
     `} render={(data) =>(
         <AboutContainer>
             <AboutHeading>Whoami</AboutHeading>
             <AboutMain>
-                
                 <AboutText >
-                   {data.aboutPage}
+                  {data.about.edges[0].node.about}
                 </AboutText>
             </AboutMain>
         </AboutContainer> 
