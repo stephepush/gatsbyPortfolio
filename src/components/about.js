@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
+import { text } from "../data/text";
 
 /* import Avataaars from "../svg-assets/"; */
 
@@ -137,42 +138,18 @@ const AboutText = styled.p`
         
     } 
 `;
-
-/* const About = () => {
+ const About = () => {
     return (
         <AboutContainer>
             <AboutHeading>Whoami</AboutHeading>
             <AboutMain>
                 
                 <AboutText>
-                    Hi all! I'm just writing this tidbit for now to see how things look. Nbd.
+                    {text.about}
                 </AboutText>
             </AboutMain>
         </AboutContainer>
     )
-} */
+}
 
-const About = () => (
-    <StaticQuery query={graphql`
-        {
-            about: allTextJson {
-                edges {
-                    node {
-                    about
-                    }
-                }
-            }
-        }
-    `} render={(data) =>(
-        <AboutContainer>
-            <AboutHeading>Whoami</AboutHeading>
-            <AboutMain>
-                <AboutText >
-                  {data.about.edges[0].node.about}
-                </AboutText>
-            </AboutMain>
-        </AboutContainer> 
-    )}
- />
-)
 export default About;
