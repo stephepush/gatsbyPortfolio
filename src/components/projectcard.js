@@ -218,23 +218,22 @@ function ProjectCard(props) {
     return (
         
             <Edge>
-                <ImageContainer  /* src="https://res.cloudinary.com/dmkct6wfu/image/upload/v1561521301/coliseum-4290893_1920_eqfagn.jpg" */>
-                <Img fluid={props.image.childImageSharp.fluid} />
+                <ImageContainer  >
+                    <Img fluid={props.image.childImageSharp.fluid} />
                 </ImageContainer>
-                <Heading>This is a heading</Heading>
+                <Heading>{props.name}</Heading>
                 <ParagraphDiv>
                     <Description>
-                        This is just some placeholding
-                        text for now. This is where a short
-                        description of the cards subject goes.
-                        Just putting this all here to see how
-                        the text looks.
+                        {props.description}
                     </Description>
                 </ParagraphDiv>
                 <ButtonDiv>
                     <Button>
-                        <FontAwesomeIcon 
-                        icon={ faExternalLinkAlt } size="3x" />
+                        <a href={props.projectLink}>
+                            <FontAwesomeIcon 
+                                icon={ faExternalLinkAlt }size="3x" 
+                            />
+                        </a>
                     </Button>
                     <Button>
                     <FontAwesomeIcon 

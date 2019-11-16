@@ -2,6 +2,8 @@ import React from "react";
 import ProjectCard from "./projectcard";
 import styled from "styled-components"
 import { StaticQuery, graphql } from 'gatsby';
+import text from '../data/text';
+import { checkPropTypes } from "prop-types";
 
 const ContainerSection = styled.section`
   display: grid;
@@ -155,18 +157,25 @@ const Projects = () => (
         }
       }
     }
-  `} render ={(data) => (
+  `} render ={(data, props) => (
     <ContainerSection>
       <ProjectSectionHeader>
         Projects
       </ProjectSectionHeader>
       <ProjectFlexedMain>
-        <ProjectCard image={data.drumMachine} />
-        <ProjectCard image={data.markdownEditor}/>
-        <ProjectCard image={data.pomodoroTimer}/>
-        <ProjectCard image={data.randomQuoteGenerator}/>
-        <ProjectCard image={data.weatherViewer}/>
-        
+        <ProjectCard 
+          image={data.drumMachine} 
+
+        />
+        <ProjectCard 
+          image={data.markdownEditor}
+          name = {text.projects[1].name} 
+          description = {text.projects[1].description}
+          projectLink = {text.projects[1].LiveProjectURL}
+        />
+        <ProjectCard image={data.pomodoroTimer} />
+        <ProjectCard image={data.randomQuoteGenerator} />
+        <ProjectCard image={data.weatherViewer} />
       </ProjectFlexedMain>
     </ContainerSection>
     )}

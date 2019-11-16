@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
-import { text } from "../data/text";
+import text  from "../data/text";
 
 /* import Avataaars from "../svg-assets/"; */
 
