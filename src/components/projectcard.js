@@ -236,8 +236,12 @@ function ProjectCard(props) {
                         </a>
                     </Button>
                     <Button>
-                    <FontAwesomeIcon 
-                    icon={ faGithub } size="3x" />
+                        <a href={props.githubLink}>
+                            <FontAwesomeIcon 
+                                icon={ faGithub } size="3x"
+                            />
+                        </a>
+                    
                     </Button>
                 </ButtonDiv>
             </Edge>

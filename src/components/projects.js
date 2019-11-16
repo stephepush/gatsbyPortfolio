@@ -165,17 +165,39 @@ const Projects = () => (
       <ProjectFlexedMain>
         <ProjectCard 
           image={data.drumMachine} 
-
+          name = {text.projects[0].name} 
+          description = {text.projects[0].description}
+          githubLink = {text.projects[0].GithubURL}
+          projectLink = {text.projects[0].LiveProjectURL}
         />
         <ProjectCard 
           image={data.markdownEditor}
           name = {text.projects[1].name} 
           description = {text.projects[1].description}
+          githubLink = {text.projects[1].GithubURL}
           projectLink = {text.projects[1].LiveProjectURL}
         />
-        <ProjectCard image={data.pomodoroTimer} />
-        <ProjectCard image={data.randomQuoteGenerator} />
-        <ProjectCard image={data.weatherViewer} />
+        <ProjectCard 
+          image={data.pomodoroTimer} 
+          name = {text.projects[2].name} 
+          description = {text.projects[2].description}
+          githubLink = {text.projects[2].GithubURL}
+          projectLink = {text.projects[2].LiveProjectURL}
+        />
+        <ProjectCard 
+          image={data.randomQuoteGenerator}
+          name = {text.projects[3].name} 
+          description = {text.projects[3].description}
+          githubLink = {text.projects[3].GithubURL}
+          projectLink = {text.projects[3].LiveProjectURL} 
+        />
+        <ProjectCard 
+          image={data.weatherViewer} 
+          name = {text.projects[4].name} 
+          description = {text.projects[4].description}
+          githubLink = {text.projects[4].GithubURL}
+          projectLink = {text.projects[4].LiveProjectURL}
+        />
       </ProjectFlexedMain>
     </ContainerSection>
     )}
