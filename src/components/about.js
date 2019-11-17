@@ -81,12 +81,12 @@ const AboutMain = styled.main`
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-        
+        grid-column: 2/4;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-column: 2/3;
+        grid-column: 2/4;
         grid-row: 3/4;
     }
 
