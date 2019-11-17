@@ -121,21 +121,26 @@ const SVGAvatar = styled.svg`
 `;
 
 const AboutText = styled.p`
+    margin-left: 3em;
+    font-size: 2.5vh;
     @media screen and (max-width: 768px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-        
+        font-size: 2.20vh;
     }
 
     @media screen and (max-width: 448px )
     /*For smartphones, particularly iphones*/{
-        grid-column: 2/3;
+        font-size: 1.95vh;
+        grid-column: 2/5;
         grid-row: 2/3;
+        color: orange;
     }
 
     @media screen and (max-width: 350px )
     /*iphone SE*/{
-        
+        grid-column: 2/4;
+        font-size: 1rem
     } 
 `;
  const About = () => {

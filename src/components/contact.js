@@ -118,6 +118,7 @@ const FlexboxContactButtonContainer = styled.section`
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin-left: 3em;
 
     @media screen and (max-width: 768px )
     
