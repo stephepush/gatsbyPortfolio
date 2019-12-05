@@ -10,13 +10,16 @@ import { faTwitter, faGithub, faLinkedin, faFreeCodeCamp } from "@fortawesome/fr
 
 const ContactSection = styled.section`
     display: grid;
-    height: 75vh;
+    height: 90vh;
 
     grid-template-columns: 10% 50% 30% 10%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     color: #384688;
     background-color: #DFF0D8;
 
+    @media screen and (max-width: 991px ){
+        height: 94vh;
+    }
     @media screen and (max-width: 768px )
     and (orientation: portrait) 
     /*add and portrait orientation*/

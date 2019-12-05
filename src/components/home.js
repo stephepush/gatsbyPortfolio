@@ -136,6 +136,10 @@ const HomeMainSubHeading = styled.h2`
     margin-bottom: 0;
     padding-left: .2em;
 
+    @media screen and (max-width: 991px ){
+        height: 100vh
+    }
+
     @media screen and (max-width: 648px ){
         grid-column: 1/2;
         grid-row: 2/5;

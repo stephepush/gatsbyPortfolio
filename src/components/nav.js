@@ -67,7 +67,7 @@ const Nav = () => (
             </StyledNav> 
         </Desktop>
         <Mobile>
-            <SlideBurgerMenu  />
+            <SlideBurgerMenu />
         </Mobile>
         <Tablet>
             <SlideBurgerMenu />

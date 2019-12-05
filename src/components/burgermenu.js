@@ -7,7 +7,7 @@ const BurgerStyles = {
       position: 'fixed',
       width: '36px',
       height: '30px',
-      left: '36px',
+      right: '36px',
       top: '36px'
     },
     bmBurgerBars: {
@@ -61,7 +61,7 @@ class SlideBurgerMenu extends React.Component {
 
     render () {
         return (
-            <Menu styles={ BurgerStyles }>
+            <Menu styles={ BurgerStyles } right>
                 <a id="home" href="#">Home</a>
                 <a id="about" href="#">About</a>
                 <a id="projects" href="#">Selected Work</a>

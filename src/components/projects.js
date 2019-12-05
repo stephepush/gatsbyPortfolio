@@ -3,7 +3,7 @@ import ProjectCard from "./projectcard";
 import styled from "styled-components"
 import { StaticQuery, graphql } from 'gatsby';
 import text from '../data/text';
-import { checkPropTypes } from "prop-types";
+//import { checkPropTypes } from "prop-types";
 
 const ContainerSection = styled.section`
   display: grid;
@@ -23,6 +23,8 @@ const ContainerSection = styled.section`
       
        
   }
+
+
 
   @media screen and (max-width: 700px )
     /*For smartphones, particularly iphones*/{
