@@ -17,7 +17,7 @@ const HomeContainer = styled.section`
     
     grid-template-columns: 10% 50% auto 10%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    background: #85144b;
+    background: #DE6D43;
     @font-face {
         font-family: "Objective Regular";
         src: url("../fonts/Objective-Regular.woff2") format("woff2");
@@ -136,9 +136,7 @@ const HomeMainSubHeading = styled.h2`
     margin-bottom: 0;
     padding-left: .2em;
 
-    @media screen and (max-width: 991px ){
-        height: 100vh
-    }
+   
 
     @media screen and (max-width: 648px ){
         grid-column: 1/2;

@@ -12,7 +12,7 @@ const AboutContainer = styled.section`
     grid-template-columns: 10% 50% 30% 10%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-    background-color: #3E412C;
+    background-color: #424846;
     color: #00fe6f;
     font-family: 'Courier New', Courier, monospace;
     @media screen and (max-width: 768px ) 

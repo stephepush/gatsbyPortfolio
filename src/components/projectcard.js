@@ -25,30 +25,45 @@ const Edge = styled.div`
     box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
     
 
-    @media screen and (max-width: 877px ) 
+    /*@media screen and (max-width: 877px ) 
     and (orientation: portrait)
-    /*add and portrait orientation*/
-    /*For tablets/regular ipads*/{
+    //add and portrait orientation
+    //For tablets/regular ipads
+    {
        grid-template-rows: 3.75fr 1fr 2.5fr 2fr ;
        width: 45%;
-       height: 450px;
-       
-       
-       
-    }
+       height: 450px;  
+    } */
 
-    
-
-
-    @media screen and (max-width: 700px )
-    /*For smartphones, particularly iphones*/{
+    /*@media screen and (max-width: 700px )
+    //For smartphones, particularly iphones
+    {
         width: 95%;
         margin-bottom: 50%;
         grid-template-rows: 5fr 1.2fr 2.5fr 2fr ;
         align-self: center;
         overflow: hidden;
         
+    }*/
+
+    @media screen and (max-width: 550px )
+    /*iphone SE and other small phones*/{
+        margin-bottom: 50%;
+        width: 75%;
+        height: 550px;
+        grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
     }
+
+    @media screen and (max-width: 485px )
+    /*iphone SE and other small phones*/{
+        margin-bottom: 50%;
+        width: 75%;
+        max-height: 35%; 
+        grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
+    }
+
+
+    
 
     @media screen and (max-width: 350px )
     /*iphone SE and other small phones*/{

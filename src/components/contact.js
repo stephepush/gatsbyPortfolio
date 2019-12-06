@@ -13,9 +13,9 @@ const ContactSection = styled.section`
     height: 90vh;
 
     grid-template-columns: 10% 50% 30% 10%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3rem 1fr 1fr 3rem 1fr 1fr 1fr 1fr 1fr;
     color: #384688;
-    background-color: #DFF0D8;
+    background-color: #819975;
 
     @media screen and (max-width: 991px ){
         height: 94vh;
@@ -46,49 +46,46 @@ const ContactSection = styled.section`
 `;
 
 const ContactHeading = styled.h2`
-    grid-row: 2/4;
+    grid-row: 2/6;
     grid-column: 1/2;
     background-color: white;
-    width: 1.60rem;
-    
     margin-right: 0;
     margin-left: 0;
     justify-self: end;
     text-align: center;
     writing-mode: vertical-rl;
-    
-    
-    
     margin-bottom: 0;
-    padding-left: .2em;
-    @media screen and (max-width: 768px ) 
+    padding: .75rem;
+
+    @media screen and (max-width: 960px ) 
     /*add and portrait orientation*/
     /*For tablets/regular ipads*/{
-        grid-column: 1/2;
-        grid-row: 2/5;
-        width: 50%;
-        height: fit-content;
+        
         font-size: 1.15rem; 
     }
 
-    @media screen and (max-width: 448px )
+    @media screen and (max-width: 648px )
     /*For smartphones, particularly iphones*/{
-        margin-top: 5.75rem;
-        padding-top: .3rem;
-        padding-bottom: .3rem;
-        text-align: center;
+        font-size: 1rem;
+        padding: .30rem;
     }
 
-    @media screen and (max-width: 350px )
+    @media screen and (max-width: 400px )
     /*iphone SE*/{
-        margin-top: 3.25rem;
-        text-align: center;
+        font-size: .85rem;
+        padding: .15rem;
     } 
 `;
 
 const ContactText = styled.p`
-    grid-row: 1/2;
+    grid-row: 2/3;
     grid-column: 2/3;
+    margin: 0 auto;
+    padding-top: .8rem;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+
     @media screen and (max-width: 768px )
     and (orientation: portrait) 
     /*add and portrait orientation*/
@@ -99,7 +96,8 @@ const ContactText = styled.p`
     @media screen and (max-width: 768px )
     
     /*For tablets/regular ipads*/{
-        
+        font-size: 1.10rem;
+        grid-column: 2/4;
     }
 
     @media screen and (max-width: 448px )
@@ -115,7 +113,7 @@ const ContactText = styled.p`
 `;
 
 const FlexboxContactButtonContainer = styled.section`
-    grid-row: 2/3;
+    grid-row: 3/5;
     grid-column: 2/3;
     display: flex;
     flex-direction: row;
@@ -126,12 +124,14 @@ const FlexboxContactButtonContainer = styled.section`
     @media screen and (max-width: 768px )
     
     /*For tablets/regular ipads*/{
-        
+        grid-row: 3/6;
+        grid-column: 2/4;
     }
 
-    @media screen and (max-width: 448px )
+    @media screen and (max-width: 569px )
     /*For smartphones, particularly iphones*/{
-        
+        grid-column: 2/5;
+        margin-left: 0;
     }
 
     @media screen and (max-width: 350px )
@@ -148,21 +148,21 @@ const Contacts = () => {
                 Contact Me
             </ContactHeading>
             <ContactText>
-                Feel free to contact me or see 
+                Contact me/see 
                 what I'm up to on these platforms:
             </ContactText>
             <FlexboxContactButtonContainer>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faGithub } size="4x" />  
+                        <FontAwesomeIcon icon={ faGithub } size="5x" />  
                     </SplashButton>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faLinkedin } size="4x" />  
+                        <FontAwesomeIcon icon={ faLinkedin } size="5x" />  
                     </SplashButton>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faTwitter } size="4x" />  
+                        <FontAwesomeIcon icon={ faTwitter } size="5x" />  
                     </SplashButton>
                     <SplashButton>
-                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="4x" />  
+                        <FontAwesomeIcon icon={ faFreeCodeCamp } size="5x" />  
                     </SplashButton> 
             </FlexboxContactButtonContainer>
 

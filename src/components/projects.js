@@ -9,7 +9,7 @@ const ContainerSection = styled.section`
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 10rem 1fr 5rem;
-  background-color: #F3E5AB;
+  background-color: #F8F2D2;
   
   @media screen and (min-width: 1599px) {
     grid-template-columns: 10% 80% 10%;
