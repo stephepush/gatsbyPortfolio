@@ -23,7 +23,7 @@ const Edge = styled.div`
     -webkit-box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
     -moz-box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
     box-shadow: 2px 2px 5px 1px rgba(102,70,81,1);
-    
+    z-index: 25;
 
     /*@media screen and (max-width: 877px ) 
     and (orientation: portrait)
@@ -57,7 +57,7 @@ const Edge = styled.div`
     @media screen and (max-width: 485px )
     /*iphone SE and other small phones*/{
         margin-bottom: 50%;
-        width: 75%;
+        width: 85%;
         max-height: 35%; 
         grid-template-rows: 4.25fr 1.2fr 2.5fr 2fr ;
     }

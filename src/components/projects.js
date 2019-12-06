@@ -10,6 +10,7 @@ const ContainerSection = styled.section`
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 10rem 1fr 5rem;
   background-color: #F8F2D2;
+  z-index: -4;
   
   @media screen and (min-width: 1599px) {
     grid-template-columns: 10% 80% 10%;
@@ -58,13 +59,11 @@ const ProjectSectionHeader = styled.h2`
     writing-mode: vertical-rl;
     margin-bottom: 0;
     padding-left: .2em;
-
-    @media screen and (max-width: 648px ){
+   /*  @media screen and (max-width: 648px ){
         grid-row: 4/5;
         width: 100%;
         font-size: 1.55rem;
     }
-
     @media screen and (max-width: 448px ){
         grid-row: 1;
         writing-mode: horizontal-tb;
@@ -73,9 +72,10 @@ const ProjectSectionHeader = styled.h2`
         text-align: center;
     }
     @media screen and (max-width: 350px )
-    /*iphone SE*/{
+    //iphone SE
+    {
         text-align: center;
-    }
+    } */
 `;
 
 const ProjectFlexedMain = styled.main`
@@ -85,6 +85,8 @@ const ProjectFlexedMain = styled.main`
   flex-wrap: wrap;
   justify-content: space-evenly;
   grid-column: 2/3;
+  background: rgba(255,255,255, 0);
+  z-index: 5;
   @media screen and (min-width: 1599px) {
     grid-column: 2/3;
   }
