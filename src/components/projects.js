@@ -47,18 +47,21 @@ const ContainerSection = styled.section`
 `;
 
 const ProjectSectionHeader = styled.h2`
-    grid-row: 2/3;
-    grid-column: 1/2;
+    grid-row: 1/3;
+    grid-column: 1;
     background-color: white;
-    width: 1.60rem;
-    height: 12rem;
+    font-size: 5rem;
+    width: 0;
+    /* height: 12rem; */
     margin-right: 0;
     margin-left: 0;
-    justify-self: end;
-    text-align: center;
+    /* justify-self: center;
+    text-align: center; */
     writing-mode: vertical-rl;
     margin-bottom: 0;
-    padding-left: .2em;
+    /* padding-left: .2em; */
+    
+    z-index: 4; /* You need to get the text to fit withing the grid. Should be easy */
    /*  @media screen and (max-width: 648px ){
         grid-row: 4/5;
         width: 100%;
@@ -85,7 +88,7 @@ const ProjectFlexedMain = styled.main`
   flex-wrap: wrap;
   justify-content: space-evenly;
   grid-column: 2/3;
-  background: rgba(255,255,255, 0);
+  background: rgba(0,0,0, 0);
   z-index: 5;
   @media screen and (min-width: 1599px) {
     grid-column: 2/3;
